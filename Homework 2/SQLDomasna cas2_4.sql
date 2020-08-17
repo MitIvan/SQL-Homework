@@ -5,12 +5,12 @@ Change AchievementType table to guarantee unique names across the Achievement ty
 */
 
 alter table GradeDetails
-add constraint DF_AchievementMaxPoints
+add constraint DF_GreadDetails_AchievementMaxPoints
 default 100 for AchievementMaxPoints
 
 alter table GradeDetails
-add constraint CHK_AchievementPoints
+add constraint CHK_GreadDetails_AchievementMaxPoints
 check (AchievementPoints <= AchievementMaxPoints )
 
 alter table AchievementType
-add constraint UC_Name unique (Name)
+add constraint UC_AchievementType_Name unique (Name)

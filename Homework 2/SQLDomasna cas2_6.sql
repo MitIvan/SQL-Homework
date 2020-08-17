@@ -11,7 +11,7 @@ cross join dbo.AchievementType a
 
 select distinct t.FirstName as Tracher
 from dbo.Grade g
-inner join dbo.Teacher t on g.Grade = t.ID
+inner join dbo.Teacher t on g.TeacherID = t.ID
 
 select distinct t.FirstName as Teacher
 from dbo.Teacher t
